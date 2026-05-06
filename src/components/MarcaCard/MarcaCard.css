@@ -1,0 +1,28 @@
+.marca-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.marca-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.marca-card img {
+  max-height: 80px;
+  max-width: 80%;
+  object-fit: contain;
+  filter: grayscale(0%);
+  transition: filter 0.2s;
+}
+
+.marca-card:hover img {
+  filter: grayscale(100%);
+}

@@ -1,0 +1,32 @@
+.solucoes {
+  padding: 80px 48px;
+  background-color: #F1F3F5;
+}
+
+.solucoes__titulo {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #000000;
+  margin-bottom: 40px;
+  font-family: "Roboto", sans-serif;
+}
+
+.solucoes__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 767px) {
+  .solucoes {
+    padding: 48px 24px;
+  }
+
+  .solucoes__cards {
+    grid-template-columns: 1fr;
+  }
+
+  .solucoes__titulo {
+    font-size: 1.5rem;
+  }
+}

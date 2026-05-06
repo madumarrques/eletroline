@@ -1,0 +1,134 @@
+.consulta-os {
+  padding: 80px 48px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.consulta-os::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(236, 93, 27, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.consulta-os::after {
+  content: '';
+  position: absolute;
+  bottom: -50%;
+  left: -10%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(236, 86, 27, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.consulta-os__container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.consulta-os__texto {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.consulta-os__titulo {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.2;
+}
+
+.consulta-os__subtitulo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FF4713;
+  font-family: "Roboto", sans-serif;
+}
+
+.consulta-os__desc {
+  font-size: 0.95rem;
+  color: #aaaaaa;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  max-width: 500px;
+  margin-top: 8px;
+}
+
+.consulta-os__btn {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 16px 40px;
+  background-color: #FF4713;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(236, 58, 27, 0.4);
+}
+
+.consulta-os__btn:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+  box-shadow: 0 6px 28px rgba(236, 76, 27, 0.6);
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .consulta-os {
+    padding: 60px 32px;
+  }
+
+  .consulta-os__titulo {
+    font-size: 1.6rem;
+  }
+
+  .consulta-os__subtitulo {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .consulta-os {
+    padding: 48px 24px;
+  }
+
+  .consulta-os__container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .consulta-os__titulo {
+    font-size: 1.5rem;
+  }
+
+  .consulta-os__subtitulo {
+    font-size: 1.1rem;
+  }
+
+  .consulta-os__desc {
+    font-size: 0.9rem;
+  }
+
+  .consulta-os__btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

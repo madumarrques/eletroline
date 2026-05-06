@@ -1,0 +1,38 @@
+.marcas {
+  padding: 80px 48px;
+  background-color: #F1F3F5;
+}
+
+.marcas__titulo {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #000000;
+  margin-bottom: 40px;
+  font-family: "Roboto", sans-serif;
+}
+
+.marcas__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .marcas__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .marcas {
+    padding: 48px 24px;
+  }
+
+  .marcas__titulo {
+    font-size: 1.5rem;
+  }
+
+  .marcas__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,52 @@
+.card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: #E5E7E8;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+}
+
+.card__img {
+  width: 100%;
+  height: 260px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #e0e0e0;
+}
+
+.card__body {
+  padding: 16px 20px;
+}
+
+.card__tag {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.card__titulo {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FF4713;
+  margin-bottom: 10px;
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+}
+
+.card__desc {
+  font-size: 0.85rem;
+  color: #505050;
+  line-height: 1.6;
+  font-family: "Inter", sans-serif;
+}

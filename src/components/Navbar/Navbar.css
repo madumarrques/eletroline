@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 48px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  box-sizing: border-box;
+  background-color: transparent;
+  font-family: "Inter", sans-serif;
+}
+
+.navbar__logo img {
+  height: 48px;
+  width: auto;
+}
+
+.navbar__nav {
+  display: flex;
+  gap: 32px;
+}
+
+.navbar__nav a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.1s, text-decoration 0.2s;
+}
+
+.navbar__nav a:hover {
+  color: #FF4713;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+}
+
+.navbar__nav a.active {
+  color: #FF4713;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+}
+
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger__line {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: #000000;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.hamburger__line.open:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger__line.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger__line.open:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    padding: 16px 24px;
+  }
+
+  .navbar__hamburger {
+    display: flex;
+  }
+
+  .navbar__nav {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(240, 240, 240, 0.95);
+    padding: 8px 0;
+  }
+
+  .navbar__nav--open {
+    display: flex;
+  }
+
+  .navbar__nav a {
+    padding: 14px 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    color: #000000;
+  }
+
+  .navbar__nav a:last-child {
+    border-bottom: none;
+  }
+
+  .navbar__nav a.active {
+    color: #FF4713;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 2px;
+  }
+
+  .hamburger__line {
+    background-color: #000000;
+  }
+}
