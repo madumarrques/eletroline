@@ -68,7 +68,7 @@ function Hero() {
         <p className="hero__subtitle">{slides[atual].subtitulo}</p>
         <div className="hero__buttons">
           <a href="#orcamento" className="hero__btn hero__btn--primary">Faça seu orçamento</a>
-          <a href="https://shoficina.com.br/osweb/home.php" className="hero__btn hero__btn--secondary">Consulte sua OS</a>
+          <a href="https://shoficina.com.br/osweb/home.php" target="_blank" rel="noopener noreferrer" className="hero__btn hero__btn--secondary">Consulte sua OS</a>
         </div>
       </div>
 

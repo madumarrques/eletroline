@@ -1,0 +1,206 @@
+.footer {
+  background-color: #111111;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* Área principal — 3 colunas */
+.footer__principal {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.2fr;
+  gap: 56px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 48px 48px;
+}
+
+/* Colunas */
+.footer__coluna {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Logo */
+.footer__logo img {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+  transition: opacity 0.2s;
+}
+
+.footer__logo:hover img {
+  opacity: 1;
+}
+
+/* Descrição */
+.footer__desc {
+  font-size: 0.88rem;
+  color: #888888;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.75;
+  max-width: 300px;
+}
+
+/* Redes sociais */
+.footer__redes {
+  display: flex;
+  gap: 10px;
+}
+
+.footer__rede {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.footer__rede:hover {
+  background: #FF4713;
+  transform: translateY(-2px);
+}
+
+.footer__rede svg {
+  width: 16px;
+  height: 16px;
+  stroke: #cccccc;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke 0.2s;
+}
+
+.footer__rede:hover svg {
+  stroke: #ffffff;
+}
+
+/* Títulos das colunas */
+.footer__titulo-coluna {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #FF4713;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Listas de links */
+.footer__lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer__link {
+  font-size: 0.88rem;
+  color: #888888;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  line-height: 1.5;
+  transition: color 0.2s;
+}
+
+.footer__link:hover {
+  color: #ffffff;
+}
+
+/* Lista de contato */
+.footer__lista--contato {
+  gap: 16px;
+}
+
+.footer__contato-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.footer__contato-item svg {
+  width: 16px;
+  height: 16px;
+  fill: #FF4713;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.footer__texto {
+  font-size: 0.88rem;
+  color: #888888;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+}
+
+/* Rodapé final */
+.footer__rodape {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 20px 48px;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer__copy {
+  font-size: 0.78rem;
+  color: #555555;
+  font-family: "Roboto", sans-serif;
+}
+
+.footer__cnpj {
+  font-size: 0.75rem;
+  color: #444444;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Responsivo tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footer__principal {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 48px 32px 40px;
+  }
+
+  .footer__coluna--marca {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .footer__desc {
+    max-width: 400px;
+  }
+
+  .footer__rodape {
+    padding: 20px 32px;
+  }
+}
+
+/* Responsivo mobile */
+@media (max-width: 767px) {
+  .footer__principal {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 48px 24px 36px;
+  }
+
+  .footer__rodape {
+    padding: 20px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .footer__desc {
+    max-width: 100%;
+  }
+}

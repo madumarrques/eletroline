@@ -1,0 +1,135 @@
+.contato {
+  padding: 60px 48px 80px;
+  background: #1b1b1b;
+  position: relative;
+  overflow: hidden;
+}
+
+.contato::after {
+  content: '';
+  position: absolute;
+  top: -45%;
+  right: -8%;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(255, 71, 19, 0.07) 0%, transparent 75%);
+  filter: blur(25px);
+  pointer-events: none;
+}
+
+.contato__titulo {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 56px;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+.contato__titulo strong {
+  font-weight: 800;
+}
+
+.contato__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.contato__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  text-decoration: none;
+}
+
+.contato__icone {
+  width: 68px;
+  height: 68px;
+  background-color: #FF4713;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 14px rgba(255, 71, 19, 0.28);
+}
+
+.contato__icone svg {
+  width: 30px;
+  height: 30px;
+  fill: #ffffff;
+}
+
+.contato__item:hover .contato__icone {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 6px 20px rgba(255, 71, 19, 0.4);
+}
+
+.contato__label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FF4713;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.3px;
+  transition: color 0.25s ease;
+}
+
+a.contato__item:hover .contato__label {
+  color: #ffffff;
+}
+
+.contato__info {
+  font-size: 0.92rem;
+  color: #b5b5b5;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.7;
+}
+
+.contato__info a {
+  color: #b5b5b5;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.contato__info a:hover {
+  color: #FF4713;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .contato {
+    padding: 60px 32px 60px;
+  }
+
+  .contato__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contato {
+    padding: 48px 24px 60px;
+  }
+
+  .contato__titulo {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+  }
+
+  .contato__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}

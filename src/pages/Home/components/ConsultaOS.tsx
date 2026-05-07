@@ -5,12 +5,8 @@ function ConsultaOS() {
     <section className="consulta-os">
       <div className="consulta-os__container">
         <div className="consulta-os__texto">
-          <h2 className="consulta-os__titulo">
-            Já fez seu orçamento?
-          </h2>
-          <p className="consulta-os__subtitulo">
-            Consulte sua Ordem de Serviço
-          </p>
+          <h2 className="consulta-os__titulo">Já fez seu orçamento?</h2>
+          <p className="consulta-os__subtitulo">Consulte sua Ordem de Serviço</p>
           <p className="consulta-os__desc">
             Acompanhe o status do reparo do seu equipamento em tempo real, de forma rápida e prática.
           </p>
@@ -24,6 +20,7 @@ function ConsultaOS() {
           Consultar Ordem de Serviço →
         </a>
       </div>
+
     </section>
   );
 }

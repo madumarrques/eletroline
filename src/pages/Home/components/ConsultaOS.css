@@ -1,6 +1,6 @@
 .consulta-os {
-  padding: 80px 48px;
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  padding: 80px 48px 80px;
+  background: #1b1b1b;
   position: relative;
   overflow: hidden;
 }
@@ -8,28 +8,18 @@
 .consulta-os::before {
   content: '';
   position: absolute;
-  top: -50%;
-  right: -10%;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(236, 93, 27, 0.15) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-.consulta-os::after {
-  content: '';
-  position: absolute;
-  bottom: -50%;
-  left: -10%;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(236, 86, 27, 0.1) 0%, transparent 70%);
+  top: -40%;
+  right: -8%;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(255, 71, 19, 0.08) 0%, transparent 75%);
+  filter: blur(20px);
   pointer-events: none;
 }
 
 .consulta-os__container {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -80,19 +70,19 @@
   font-size: 1rem;
   font-weight: 600;
   font-family: "Roboto", sans-serif;
-  transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 4px 20px rgba(236, 58, 27, 0.4);
+  transition: opacity 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 18px rgba(255, 71, 19, 0.28);
 }
 
 .consulta-os__btn:hover {
-  opacity: 0.9;
-  transform: scale(1.03);
-  box-shadow: 0 6px 28px rgba(236, 76, 27, 0.6);
+  opacity: 0.95;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(255, 71, 19, 0.38);
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .consulta-os {
-    padding: 60px 32px;
+    padding: 60px 32px 80px;
   }
 
   .consulta-os__titulo {
@@ -106,7 +96,7 @@
 
 @media (max-width: 767px) {
   .consulta-os {
-    padding: 48px 24px;
+    padding: 48px 24px 80px;
   }
 
   .consulta-os__container {
