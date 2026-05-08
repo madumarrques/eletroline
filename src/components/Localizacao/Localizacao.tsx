@@ -16,7 +16,7 @@ function Localizacao() {
             </div>
           </div>
           
-            < a href="https://www.google.com/maps/dir/?api=1&destination=Av.+Duque+de+Caxias,+207,+Centro,+Duque+de+Caxias,+RJ"
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+Duque+de+Caxias,+207,+Centro,+Duque+de+Caxias,+RJ"
             target="_blank"
             rel="noopener noreferrer"
             className="localizacao__btn"

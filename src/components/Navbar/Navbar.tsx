@@ -35,7 +35,12 @@ function Navbar() {
         <NavLink to="/contato" onClick={closeMenu}>Contato</NavLink>
       </nav>
 
-      <button className="navbar__hamburger" onClick={toggleMenu}>
+      <button
+        className="navbar__hamburger"
+        onClick={toggleMenu}
+        aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}
+        aria-expanded={menuOpen}
+      >
         <span className={`hamburger__line ${menuOpen ? 'open' : ''}`}></span>
         <span className={`hamburger__line ${menuOpen ? 'open' : ''}`}></span>
         <span className={`hamburger__line ${menuOpen ? 'open' : ''}`}></span>

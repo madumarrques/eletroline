@@ -9,7 +9,7 @@ function Footer() {
 
         {/* Coluna 1 — Logo e descrição */}
         <div className="footer__coluna footer__coluna--marca">
-          <NavLink to="/" className="footer__logo">
+          <NavLink to="/" className="footer__logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <img src={logo} alt="Eletroline" />
           </NavLink>
           <p className="footer__desc">
@@ -103,7 +103,7 @@ function Footer() {
               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
               </svg>
-              <a href="mailto:rh@eletroline.com.br" className="footer__link">rh@eletroline.com.br</a>
+              <a href="mailto:contato@eletroline.com.br" className="footer__link">contato@eletroline.com.br</a>
             </li>
             <li className="footer__contato-item">
               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

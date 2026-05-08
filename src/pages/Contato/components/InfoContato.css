@@ -1,0 +1,156 @@
+.info-contato {
+  background-color: #1b1b1b;
+  padding: 100px 80px;
+}
+
+.info-contato__cabecalho {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.info-contato__tag {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #FF4713;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.info-contato__titulo {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.2;
+  margin-top: 12px;
+}
+
+/* Grid de cards */
+.info-contato__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.info-contato__card {
+  background-color: #242424;
+  border-radius: 16px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.info-contato__card:hover {
+  border-color: rgba(255, 71, 19, 0.3);
+  transform: translateY(-3px);
+}
+
+.info-contato__icone {
+  width: 52px;
+  height: 52px;
+  background-color: rgba(255, 71, 19, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.info-contato__label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  margin-top: 4px;
+}
+
+.info-contato__info {
+  font-size: 0.92rem;
+  color: #888888;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.75;
+  flex: 1;
+}
+
+.info-contato__link {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #FF4713;
+  font-family: "Roboto", sans-serif;
+  margin-top: 4px;
+}
+
+.info-contato__conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .info-contato {
+    padding: 80px 48px;
+  }
+
+  .info-contato__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .info-contato__titulo {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .info-contato {
+    padding: 60px 24px;
+  }
+
+  .info-contato__titulo {
+    font-size: 1.8rem;
+  }
+
+  .info-contato__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .info-contato__card {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 24px 20px;
+  }
+
+  .info-contato__icone {
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .info-contato__conteudo {
+    gap: 6px;
+  }
+
+  .info-contato__label {
+    font-size: 0.95rem;
+  }
+
+  .info-contato__info {
+    font-size: 0.88rem;
+    line-height: 1.65;
+  }
+
+  .info-contato__link {
+    font-size: 0.85rem;
+  }
+}

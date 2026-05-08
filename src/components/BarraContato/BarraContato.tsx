@@ -4,7 +4,7 @@ function BarraContato() {
   return (
     <section className="contato">
       <h2 className="contato__titulo">
-        Ou entre em <strong>contato</strong>
+        Entre em <strong>contato</strong>
       </h2>
 
       <div className="contato__grid">

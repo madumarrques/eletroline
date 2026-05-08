@@ -64,6 +64,31 @@
   border-color: #FF4713;
 }
 
+.orcamento__input--erro {
+  border-color: #e53935 !important;
+}
+
+.orcamento__erro {
+  font-size: 0.78rem;
+  color: #e53935;
+  font-family: "Roboto", sans-serif;
+  margin-top: -4px;
+}
+
+.orcamento__radio {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.orcamento__radio-legenda {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #333333;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 8px;
+}
+
 .orcamento__grupo textarea {
   resize: none;
 }

@@ -1,0 +1,139 @@
+.hero-sobre {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 64px;
+  padding: 160px 80px 100px;
+  background-color: #F1F3F5;
+  min-height: 90vh;
+}
+
+.hero-sobre__conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hero-sobre__tag {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #FF4713;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.hero-sobre__titulo {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #000000;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.15;
+}
+
+.hero-sobre__subtitulo {
+  font-size: 1.05rem;
+  color: #555555;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.75;
+  max-width: 520px;
+}
+
+.hero-sobre__acoes {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.hero-sobre__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.hero-sobre__btn--primario {
+  background-color: #FF4713;
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(255, 71, 19, 0.3);
+}
+
+.hero-sobre__btn--secundario {
+  background-color: transparent;
+  color: #000000;
+  border: 2px solid rgba(0, 0, 0, 0.25);
+}
+
+.hero-sobre__btn--secundario:hover {
+  border-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero-sobre__btn:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+}
+
+/* Imagem */
+.hero-sobre__imagem {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.14);
+  aspect-ratio: 4 / 3;
+}
+
+.hero-sobre__imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 90% center;
+  display: block;
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero-sobre {
+    padding: 140px 48px 80px;
+    gap: 40px;
+  }
+
+  .hero-sobre__titulo {
+    font-size: 2.4rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .hero-sobre {
+    grid-template-columns: 1fr;
+    padding: 120px 24px 60px;
+    gap: 36px;
+    min-height: auto;
+  }
+
+  .hero-sobre__titulo {
+    font-size: 2rem;
+  }
+
+  .hero-sobre__subtitulo {
+    font-size: 0.95rem;
+    max-width: 100%;
+  }
+
+  .hero-sobre__imagem {
+    aspect-ratio: 16 / 9;
+    order: -1;
+  }
+
+  .hero-sobre__btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

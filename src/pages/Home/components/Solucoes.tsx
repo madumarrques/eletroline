@@ -24,9 +24,9 @@ function Solucoes() {
     <section className="solucoes">
       <h2 className="solucoes__titulo">Nossas Soluções</h2>
       <div className="solucoes__cards">
-        {cards.map((card, index) => (
+        {cards.map((card) => (
           <Card
-            key={index}
+            key={card.titulo}
             tag={card.tag}
             titulo={card.titulo}
             descricao={card.descricao}

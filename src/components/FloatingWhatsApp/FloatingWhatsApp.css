@@ -12,6 +12,12 @@
   justify-content: center;
   box-shadow: 0 4px 20px rgba(255, 71, 19, 0.45);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  /* Força compositing de GPU — corrige sumiço em iOS Safari durante scroll */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .floating-whatsapp:hover {

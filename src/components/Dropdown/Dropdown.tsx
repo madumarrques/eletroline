@@ -33,6 +33,8 @@ function Dropdown({ options, value, placeholder = 'Selecione', onChange }: Dropd
         type="button"
         className={`dropdown__trigger ${open ? 'dropdown__trigger--open' : ''}`}
         onClick={() => setOpen(!open)}
+        aria-haspopup="listbox"
+        aria-expanded={open}
       >
         <span className={value ? 'dropdown__value' : 'dropdown__placeholder'}>
           {value || placeholder}
@@ -42,16 +44,19 @@ function Dropdown({ options, value, placeholder = 'Selecione', onChange }: Dropd
           width="12"
           height="12"
           viewBox="0 0 12 12"
+          aria-hidden="true"
         >
-          <path fill="#EC1B23" d="M6 8L1 3h10z" />
+          <path fill="#FF4713" d="M6 8L1 3h10z" />
         </svg>
       </button>
 
       {open && (
-        <ul className="dropdown__lista">
+        <ul className="dropdown__lista" role="listbox">
           {options.map((option) => (
             <li
               key={option}
+              role="option"
+              aria-selected={value === option}
               className={`dropdown__item ${value === option ? 'dropdown__item--ativo' : ''}`}
               onClick={() => handleSelect(option)}
             >

@@ -5,6 +5,7 @@
   padding: 24px;
   background-color: #ffffff;
   border-radius: 8px;
+  border: none;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
@@ -15,14 +16,19 @@
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
+.marca-card:focus-visible {
+  outline: 2px solid #FF4713;
+  outline-offset: 3px;
+}
+
 .marca-card img {
   max-height: 80px;
   max-width: 80%;
   object-fit: contain;
-  filter: grayscale(0%);
-  transition: filter 0.2s;
+  transition: filter 0.2s, opacity 0.2s;
 }
 
 .marca-card:hover img {
-  filter: grayscale(100%);
+  filter: none;
+  opacity: 0.85;
 }

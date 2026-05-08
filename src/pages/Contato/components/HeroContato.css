@@ -1,0 +1,117 @@
+.hero-contato {
+  background-color: #F1F3F5;
+  padding: 160px 80px 100px;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-contato__conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 680px;
+}
+
+.hero-contato__tag {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #FF4713;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.hero-contato__titulo {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: #000000;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.15;
+}
+
+.hero-contato__subtitulo {
+  font-size: 1.05rem;
+  color: #555555;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.75;
+  max-width: 520px;
+}
+
+.hero-contato__acoes {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.hero-contato__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.hero-contato__btn:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+}
+
+.hero-contato__btn--primario {
+  background-color: #FF4713;
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(255, 71, 19, 0.3);
+}
+
+.hero-contato__btn--secundario {
+  background-color: transparent;
+  color: #000000;
+  border: 2px solid rgba(0, 0, 0, 0.25);
+}
+
+.hero-contato__btn--secundario:hover {
+  border-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero-contato {
+    padding: 140px 48px 80px;
+  }
+
+  .hero-contato__titulo {
+    font-size: 2.6rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .hero-contato {
+    padding: 120px 24px 60px;
+    min-height: auto;
+  }
+
+  .hero-contato__titulo {
+    font-size: 2.2rem;
+  }
+
+  .hero-contato__subtitulo {
+    font-size: 0.95rem;
+    max-width: 100%;
+  }
+
+  .hero-contato__acoes {
+    flex-direction: column;
+  }
+
+  .hero-contato__btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

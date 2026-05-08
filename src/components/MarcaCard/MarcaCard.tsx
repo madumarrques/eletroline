@@ -8,9 +8,14 @@ interface MarcaCardProps {
 
 function MarcaCard({ logo, nome, onClick }: MarcaCardProps) {
   return (
-    <div className="marca-card" onClick={onClick}>
+    <button
+      type="button"
+      className="marca-card"
+      onClick={onClick}
+      aria-label={`Ver aparelhos atendidos: ${nome}`}
+    >
       <img src={logo} alt={nome} />
-    </div>
+    </button>
   );
 }
 

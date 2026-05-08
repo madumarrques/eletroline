@@ -60,7 +60,7 @@ function Hero() {
     >
       <div className="hero__overlay" />
 
-      <button className="hero__seta hero__seta--esq" onClick={anterior}>&#8249;</button>
+      <button className="hero__seta hero__seta--esq" onClick={anterior} aria-label="Slide anterior">&#8249;</button>
 
       <div className="hero__content">
         <span className="hero__tag">{slides[atual].tag}</span>
@@ -72,7 +72,7 @@ function Hero() {
         </div>
       </div>
 
-      <button className="hero__seta hero__seta--dir" onClick={proximo}>&#8250;</button>
+      <button className="hero__seta hero__seta--dir" onClick={proximo} aria-label="Próximo slide">&#8250;</button>
 
       <div className="hero__bolinhas">
         {slides.map((_, index) => (
