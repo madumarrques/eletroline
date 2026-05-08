@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './Hero.css';
 
 import heroImg from '../../../assets/HeroImg.png';
@@ -32,6 +32,7 @@ const slides = [
 function Hero() {
   const [atual, setAtual] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
+  const touchStartX = useRef<number | null>(null);
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 767);
@@ -42,13 +43,26 @@ function Hero() {
   useEffect(() => {
     const timer = setInterval(() => {
       setAtual((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    }, 3500);
     return () => clearInterval(timer);
   }, []);
 
   const irPara = (index: number) => setAtual(index);
   const anterior = () => setAtual((prev) => (prev - 1 + slides.length) % slides.length);
   const proximo = () => setAtual((prev) => (prev + 1) % slides.length);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const delta = touchStartX.current - e.changedTouches[0].clientX;
+    if (Math.abs(delta) > 40) {
+      delta > 0 ? proximo() : anterior();
+    }
+    touchStartX.current = null;
+  };
 
   return (
     <section
@@ -57,6 +71,8 @@ function Hero() {
         backgroundImage: `url(${slides[atual].imagem})`,
         backgroundPosition: isMobile ? slides[atual].posicaoMobile : 'center',
       }}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
     >
       <div className="hero__overlay" />
 

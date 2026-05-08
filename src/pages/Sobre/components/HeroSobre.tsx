@@ -3,7 +3,12 @@ import './HeroSobre.css';
 
 function HeroSobre() {
   return (
-    <section className="hero-sobre">
+    <section
+      className="hero-sobre"
+      style={{ backgroundImage: `url(${heroImg})` }}
+    >
+      <div className="hero-sobre__overlay" />
+
       <div className="hero-sobre__conteudo">
         <span className="hero-sobre__tag">— ASSISTÊNCIA TÉCNICA AUTORIZADA</span>
         <h1 className="hero-sobre__titulo">
@@ -37,10 +42,6 @@ function HeroSobre() {
             Falar no WhatsApp
           </a>
         </div>
-      </div>
-
-      <div className="hero-sobre__imagem" aria-hidden="true">
-        <img src={heroImg} alt="Equipamentos de áudio profissional" />
       </div>
     </section>
   );

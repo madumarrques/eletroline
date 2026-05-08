@@ -125,12 +125,29 @@
 
   .nossa-historia__card {
     padding: 20px;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 14px;
+    flex-direction: column;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 12px;
+    row-gap: 8px;
   }
 
   .nossa-historia__card-icone {
-    flex-shrink: 0;
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+  }
+
+  .nossa-historia__card-titulo {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+  }
+
+  .nossa-historia__card-texto {
+    grid-column: 1 / -1;
+    grid-row: 2;
   }
 }

@@ -2,6 +2,8 @@ import { NavLink } from 'react-router-dom';
 import logo from '../../assets/logo.png';
 import './Footer.css';
 
+const irAoTopo = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
 function Footer() {
   return (
     <footer className="footer">
@@ -9,7 +11,7 @@ function Footer() {
 
         {/* Coluna 1 — Logo e descrição */}
         <div className="footer__coluna footer__coluna--marca">
-          <NavLink to="/" className="footer__logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+          <NavLink to="/" className="footer__logo" onClick={irAoTopo}>
             <img src={logo} alt="Eletroline" />
           </NavLink>
           <p className="footer__desc">
@@ -58,9 +60,9 @@ function Footer() {
         <div className="footer__coluna">
           <h3 className="footer__titulo-coluna">Navegação</h3>
           <ul className="footer__lista">
-            <li><NavLink to="/" end className="footer__link">Assistência Técnica</NavLink></li>
-            <li><NavLink to="/sobre" className="footer__link">Sobre Nós</NavLink></li>
-            <li><NavLink to="/contato" className="footer__link">Contato</NavLink></li>
+            <li><NavLink to="/" end className="footer__link" onClick={irAoTopo}>Assistência Técnica</NavLink></li>
+            <li><NavLink to="/sobre" className="footer__link" onClick={irAoTopo}>Sobre Nós</NavLink></li>
+            <li><NavLink to="/contato" className="footer__link" onClick={irAoTopo}>Contato</NavLink></li>
             <li><a href="/#orcamento" className="footer__link">Faça um Orçamento</a></li>
             <li>
               <a
@@ -75,7 +77,25 @@ function Footer() {
           </ul>
         </div>
 
-        {/* Coluna 3 — Contato */}
+        {/* Coluna 3 — Trabalhe Conosco */}
+        <div className="footer__coluna">
+          <h3 className="footer__titulo-coluna">Trabalhe Conosco</h3>
+          <ul className="footer__lista">
+            <li>
+              <p className="footer__texto">
+                Tem interesse em fazer parte da nossa equipe? Envie seu currículo para o e-mail do RH.
+              </p>
+            </li>
+            <li className="footer__contato-item">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+              </svg>
+              <a href="mailto:rh@eletroline.com.br" className="footer__link">rh@eletroline.com.br</a>
+            </li>
+          </ul>
+        </div>
+
+        {/* Coluna 4 — Contato */}
         <div className="footer__coluna">
           <h3 className="footer__titulo-coluna">Contato</h3>
           <ul className="footer__lista footer__lista--contato">
