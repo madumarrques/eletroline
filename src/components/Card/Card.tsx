@@ -1,7 +1,7 @@
 import './Card.css';
 
 interface CardProps {
-  image?: string;
+  image: string;
   tag: string;
   titulo: string;
   descricao: string;

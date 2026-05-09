@@ -7,13 +7,10 @@
   box-sizing: border-box;
 }
 
-/* Elimina o fundo branco do overscroll no iOS Safari */
 html {
-  background-color: #111111; /* combina com o footer — fix para o bounce inferior */
+  background-color: #111111;
 }
 
-/* O topo da página é coberto pelo Hero (100vh), mas garantimos
-   que não haja flash branco em nenhuma direção */
 body {
   background-color: #111111;
   -webkit-overflow-scrolling: touch;
