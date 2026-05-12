@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 import './Hero.css';
 
-import heroImg from '../../../assets/HeroImg.png';
-import heroImg1 from '../../../assets/HeroImg1.png';
-import heroImg2 from '../../../assets/HeroImg2.png';
+import heroImg from '../../../assets/HeroImg.webp';
+import heroImg1 from '../../../assets/HeroImg1.webp';
+import heroImg2 from '../../../assets/HeroImg2.webp';
 
 const slides = [
   {
@@ -43,7 +43,7 @@ function Hero() {
   useEffect(() => {
     const timer = setInterval(() => {
       setAtual((prev) => (prev + 1) % slides.length);
-    }, 3500);
+    }, 5000);
     return () => clearInterval(timer);
   }, []);
 
