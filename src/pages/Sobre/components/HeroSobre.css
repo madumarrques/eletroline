@@ -2,10 +2,12 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
+  padding-bottom: 80px;
 }
 
 .hero-sobre::after {
@@ -116,6 +118,7 @@
 @media (min-width: 768px) and (max-width: 1024px) {
   .hero-sobre {
       background-position: 70% center;
+      padding-bottom: 60px;
   }
   .hero-sobre__conteudo {
     padding: 0 48px;
